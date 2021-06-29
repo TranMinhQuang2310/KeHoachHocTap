@@ -158,6 +158,12 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Areas\AdminPage\AdminPageAreaRegistration.cs" />
+    <Compile Include="Areas\AdminPage\Controllers\AdminLoginController.cs" />
+    <Compile Include="Areas\AdminPage\Controllers\KhoaHocController.cs" />
+    <Compile Include="Areas\AdminPage\Controllers\TaiKhoanController.cs" />
+    <Compile Include="Areas\AdminPage\Controllers\ThongKeController.cs" />
+    <Compile Include="Areas\AdminPage\Data\Student.cs" />
     <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Global.asax.cs">
@@ -260,6 +266,7 @@
     <Content Include="bin\System.Web.WebPages.xml" />
     <Content Include="bin\WebGrease.dll" />
     <Content Include="Content\adminlte.min.css" />
+    <Content Include="Content\admin_css\admin_style.css" />
     <Content Include="Content\all.min.css" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -2578,6 +2585,10 @@
     <Content Include="Content\docs\license.md" />
     <Content Include="Content\docs\upgrade-guide.md" />
     <Content Include="Content\docs\_config.yml" />
+    <Content Include="Areas\AdminPage\Views\web.config" />
+    <Content Include="Areas\AdminPage\Views\ThongKe\Index.cshtml" />
+    <Content Include="Areas\AdminPage\Views\TaiKhoan\Index.cshtml" />
+    <Content Include="Areas\AdminPage\Views\KhoaHoc\Index.cshtml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\Chart.min.js" />
     <Content Include="Scripts\dashboard.js" />
@@ -2614,8 +2625,10 @@
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Login\Index.cshtml" />
     <Content Include="Views\Admin\Index.cshtml" />
+    <Content Include="Areas\AdminPage\Views\Shared\_AdminLayout.cshtml" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Areas\AdminPage\Views\Login\" />
     <Folder Include="Models\" />
     <Folder Include="Views\Home\" />
   </ItemGroup>

@@ -7,25 +7,14 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace Demo_Login2.Controllers
+namespace Demo_Login2.Areas.AdminPage.Controllers
 {
-    public class LoginController : Controller
+    public class AdminLoginController : Controller
     {
-        // GET: Login
+        // GET: AdminPage/Login
         public ActionResult Index()
         {
             return View();
-        }
-        public void SignIn()
-        {
-            if (!Request.IsAuthenticated)
-            {
-                HttpContext.GetOwinContext().Authentication.Challenge(
-                    new AuthenticationProperties { RedirectUri = "/adminpage/thongke" },
-                    OpenIdConnectAuthenticationDefaults.AuthenticationType);
-            }
-            else
-                SignOut();
         }
         public void SignOut()
         {
