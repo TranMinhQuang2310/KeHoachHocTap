@@ -6,7 +6,9 @@
     <title>Kế hoạch học tập</title>
 
     <!-- Google Font: Source Sans Pro -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Castoro&display=swap" rel="stylesheet">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="~/Content/plugins/fontawesome-free/css/all.min.css">
     <!-- Ionicons -->
@@ -35,8 +37,9 @@
 
     <!-- Admin style -->
     <link href="~/Content/admin_css/admin_style.css" rel="stylesheet" />
+
 </head>
-<body class="hold-transition sidebar-mini layout-fixed">
+<body class="hold-transition sidebar-mini layout-fixed" style="font-family: 'Castoro', serif;">
     <div class="wrapper">
 
         <!-- Navbar -->
@@ -234,12 +237,6 @@
                                         <p>Tài khoản người dùng</p>
                                     </a>
                                 </li>
-                                <li class="nav-item">
-                                    <a href="@Url.Action("Index", "KhoaHoc")" class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>Thông tin khóa học</p>
-                                    </a>
-                                </li>
                             </ul>
                         </li>
 
@@ -251,27 +248,28 @@
                                     <i class="right fas fa-angle-left"></i>
                                 </p>
                             </a>
+
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="" class="nav-link ">
+                                    <a href="@Url.Action("Index", "HocKy")" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
-                                        <p>Quản Lý Học Kì</p>
+                                        <p>Quản lý học kỳ</p>
                                     </a>
                                 </li>
                             </ul>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="" class="nav-link">
+                                    <a href="@Url.Action("Index", "KhoaDaoTao")" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
-                                        <p>Quản Lý Khóa đào tạo</p>
+                                        <p>Quản lý khóa đào tạo</p>
                                     </a>
                                 </li>
                             </ul>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="" class="nav-link">
+                                    <a href="@Url.Action("Index", "LopHoc")" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
-                                        <p>Quản Lý Lớp học</p>
+                                        <p>Quản Lý lớp học</p>
                                     </a>
                                 </li>
                             </ul>
@@ -367,5 +365,4 @@
         });
     </script>
 </body>
-
 </html>

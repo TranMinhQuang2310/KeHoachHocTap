@@ -160,7 +160,9 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Areas\AdminPage\AdminPageAreaRegistration.cs" />
     <Compile Include="Areas\AdminPage\Controllers\AdminLoginController.cs" />
-    <Compile Include="Areas\AdminPage\Controllers\KhoaHocController.cs" />
+    <Compile Include="Areas\AdminPage\Controllers\HocKyController.cs" />
+    <Compile Include="Areas\AdminPage\Controllers\KhoaDaoTaoController.cs" />
+    <Compile Include="Areas\AdminPage\Controllers\LopHocController.cs" />
     <Compile Include="Areas\AdminPage\Controllers\TaiKhoanController.cs" />
     <Compile Include="Areas\AdminPage\Controllers\ThongKeController.cs" />
     <Compile Include="Areas\AdminPage\Data\Student.cs" />
@@ -2588,7 +2590,9 @@
     <Content Include="Areas\AdminPage\Views\web.config" />
     <Content Include="Areas\AdminPage\Views\ThongKe\Index.cshtml" />
     <Content Include="Areas\AdminPage\Views\TaiKhoan\Index.cshtml" />
-    <Content Include="Areas\AdminPage\Views\KhoaHoc\Index.cshtml" />
+    <Content Include="Areas\AdminPage\Views\KhoaDaoTao\Index.cshtml" />
+    <Content Include="Areas\AdminPage\Views\LopHoc\Index.cshtml" />
+    <Content Include="Areas\AdminPage\Views\HocKy\Index.cshtml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\Chart.min.js" />
     <Content Include="Scripts\dashboard.js" />

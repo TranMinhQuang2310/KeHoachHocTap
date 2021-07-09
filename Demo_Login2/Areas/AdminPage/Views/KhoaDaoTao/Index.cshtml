@@ -12,12 +12,12 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1 class="m-0">Khóa học</h1>
+                    <h1 class="m-0">Khóa đào tạo</h1>
                 </div><!-- /.col -->
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
-                        <li class="breadcrumb-item"><a href="#">Trang chủ</a></li>
-                        <li class="breadcrumb-item active">Khóa học</li>
+                        <li class="breadcrumb-item"><a href="@Url.Action("Index", "ThongKe")">Trang chủ</a></li>
+                        <li class="breadcrumb-item active">Khóa đào tạo</li>
                     </ol>
                 </div><!-- /.col -->
             </div><!-- /.row -->
@@ -38,24 +38,19 @@
                 <table id="example1" class="table table-bordered table-striped">
                     <thead>
                         <tr>
-                            <th>Rendering engine</th>
-                            <th>Browser</th>
-                            <th>Platform(s)</th>
-                            <th>Engine version</th>
-                            <th>CSS grade</th>
+                            <th>Tên khóa</th>
+                            <th>Niên khóa</th>
+                            <th>Loại hình đào tạo</th>
                             <th></th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td>Trident</td>
+                            <td>K23</td>
                             <td>
-                                Internet
-                                Explorer 4.0
+                               2017-2021
                             </td>
-                            <td>Win 95+</td>
-                            <td> 4</td>
-                            <td>X</td>
+                            <td>Chính quy</td>
                             <td>
                                 <button id="btnShowModal_Edit" type="button" class="btn btn-outline-warning">
                                     <i class="fas fa-pen"></i>
@@ -71,9 +66,6 @@
                     <tfoot>
                     </tfoot>
                 </table>
-
-
-
                 <!-- /.card-body -->
             </div>
         </div>
@@ -86,7 +78,7 @@
         @*modal-md*@
         <div class="modal-content">
             <div class="modal-header">
-                <h3>Thêm khóa học</h3>
+                <h3>Thêm khóa đào tạo</h3>
                 <button type="button" class="close" data-dismiss="modal">
                     x
                 </button>
@@ -94,39 +86,28 @@
             <div class="modal-body">
                 <form>
                     <div class="form-group row">
-                        <label for="nienkhoa" class="col-sm-4 col-form-label">Niên khóa</label>
+                        <label for="tenkhoa" class="col-sm-4 col-form-label">Tên khóa</label>
                         <div class="col-sm-8">
-                            <input type="text" class="form-control" id="nienkhoa" value="">
+                            <input type="text" class="form-control" id="tenkhoa" value="">
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label for="khoahoc" class="col-sm-4 col-form-label">Khóa</label>
+                        <label for="nienkhoa" class="col-sm-4 col-form-label">Niên khóa</label>
                         <div class="col-sm-8">
-                            <input type="text" class="form-control" id="khoahoc" value="">
+                            <select name="tinhtrang" id="nienkhoa" class="form-control">
+                                <option value="volvo">2017-2021</option>
+                                <option value="volvo">2018-2022</option>
+                                <option value="volvo">2019-2023</option>
+                            </select>
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="loaidaotao" class="col-sm-4 col-form-label">Loại hình đào tạo</label>
                         <div class="col-sm-8">
-                            <input type="text" class="form-control" id="loaidaotao" value="">
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <label for="covan" class="col-sm-4 col-form-label">Cố vấn học tập</label>
-                        <div class="col-sm-8">
-                            <input type="text" class="form-control" id="covan" value="">
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <label for="lienhe_covan" class="col-sm-4 col-form-label">Liên hệ cố vấn</label>
-                        <div class="col-sm-8">
-                            <input type="text" class="form-control" id="lienhe_covan" value="">
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <label for="lopsinhvien" class="col-sm-4 col-form-label">Lớp sinh viên</label>
-                        <div class="col-sm-8">
-                            <input type="text" class="form-control" id="lopsinhvien" value="">
+                            <select name="tinhtrang" id="loaidaotao" class="form-control">
+                                <option value="volvo">Chính quy</option>
+                                <option value="volvo">Cao đẳng</option>
+                            </select>
                         </div>
                     </div>
                 </form>
@@ -145,7 +126,7 @@
     <div class="modal-dialog modal-md">
         <div class="modal-content">
             <div class="modal-header">
-                <h3>Sửa khóa học</h3>
+                <h3>Sửa khóa đào tạo</h3>
                 <button type="button" class="close" data-dismiss="modal">
                     x
                 </button>
@@ -153,39 +134,28 @@
             <div class="modal-body">
                 <form>
                     <div class="form-group row">
-                        <label for="nienkhoa" class="col-sm-4 col-form-label">Niên khóa</label>
+                        <label for="tenkhoa" class="col-sm-4 col-form-label">Tên khóa</label>
                         <div class="col-sm-8">
-                            <input type="text" class="form-control" id="nienkhoa" value="">
+                            <input type="text" class="form-control" id="tenkhoa" value="">
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label for="khoahoc" class="col-sm-4 col-form-label">Khóa</label>
+                        <label for="nienkhoa" class="col-sm-4 col-form-label">Niên khóa</label>
                         <div class="col-sm-8">
-                            <input type="text" class="form-control" id="khoahoc" value="">
+                            <select name="tinhtrang" id="nienkhoa" class="form-control">
+                                <option value="volvo">2017-2021</option>
+                                <option value="volvo">2018-2022</option>
+                                <option value="volvo">2019-2023</option>
+                            </select>
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="loaidaotao" class="col-sm-4 col-form-label">Loại hình đào tạo</label>
                         <div class="col-sm-8">
-                            <input type="text" class="form-control" id="loaidaotao" value="">
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <label for="covan" class="col-sm-4 col-form-label">Cố vấn học tập</label>
-                        <div class="col-sm-8">
-                            <input type="text" class="form-control" id="covan" value="">
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <label for="lienhe_covan" class="col-sm-4 col-form-label">Liên hệ cố vấn</label>
-                        <div class="col-sm-8">
-                            <input type="text" class="form-control" id="lienhe_covan" value="">
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <label for="lopsinhvien" class="col-sm-4 col-form-label">Lớp sinh viên</label>
-                        <div class="col-sm-8">
-                            <input type="text" class="form-control" id="lopsinhvien" value="">
+                            <select name="tinhtrang" id="loaidaotao" class="form-control">
+                                <option value="volvo">Chính quy</option>
+                                <option value="volvo">Cao đẳng</option>
+                            </select>
                         </div>
                     </div>
                 </form>

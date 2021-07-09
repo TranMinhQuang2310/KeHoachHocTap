@@ -6,9 +6,9 @@ using System.Web.Mvc;
 
 namespace Demo_Login2.Areas.AdminPage.Controllers
 {
-    public class KhoaHocController : Controller
+    public class HocKyController : Controller
     {
-        // GET: AdminPage/KhoaHoc
+        // GET: AdminPage/HocKy
         public ActionResult Index()
         {
             return View();
